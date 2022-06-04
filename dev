@@ -1,0 +1,1 @@
+gow run cmd/web/*.go

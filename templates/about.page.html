@@ -1,0 +1,19 @@
+{{template "base" .}}
+{{define "content"}}
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h2>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod numquam temporibus molestiae ducimus corporis quo, magnam quas, vero placeat excepturi, dolor magni atque necessitatibus enim velit consequuntur earum quae officia?</h2>
+                {{ if ne (index .StringMap "remoteIp") "" }}
+                    <h3>your ip address : {{index .StringMap "remoteIp"}}</h3>
+                    <a href="/">Home Page</a>
+                {{ else }}
+                    <h3>I don't know your ip address. Visit <a href="/">Home Page</a> so I can set it</h3>
+                {{ end }}
+               
+            </div>
+        </div>
+      
+    </div>
+   
+{{end}}
